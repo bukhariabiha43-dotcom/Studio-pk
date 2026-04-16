@@ -17,9 +17,9 @@ const Navbar = () => {
          
           <div className='flex gap-6 font-mono font-semibold text-md  cursor-pointer text-white pr-4'>
              
-              <Link to="/" className='hover:text-red-500'>Sofi Song</Link>
-              <Link to="/indain"className='hover:text-red-500'>Indain</Link>
-              <Link to="/panjabi"className='hover:text-red-500'>Panjabi </Link>
+              <Link to="/" className='hover:text-red-500'>Sufi</Link>
+              <Link to="/indain"className='hover:text-red-500'>Indian</Link>
+              <Link to="/punjabi"className='hover:text-red-500'>Panjabi </Link>
               <Link to="/pakistani"className='hover:text-red-500'>Pakistani</Link>
           </div>
          

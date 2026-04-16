@@ -3,7 +3,7 @@ import React from 'react'
 const VideoFiltr = ({ data, search, navigate }) => {
 
   const filterVideo = data.filter((item) =>
-    item.author.toLowerCase().includes((search || "").toLowerCase())
+    `${item.title} ${item.artist}`.toLowerCase().includes((search || "").toLowerCase())
   );
 
   return (
@@ -15,14 +15,12 @@ const VideoFiltr = ({ data, search, navigate }) => {
           className='p-3 rounded cursor-pointer'
         >
           <img
-            src={`https://picsum.photos/id/${item.id}/300/200`}
-            alt={item.author}
+            src={`https://img.youtube.com/vi/${item.id}/mqdefault.jpg`}
+            alt={item.title}
             className='w-full h-40 object-cover rounded-xl hover:scale-105 transition'
           />
-          <p className='mt-2 text-md font-semibold'>{item.author}</p>
-          <p className='text-sm p-1 rounded text-gray-500'>
-            Video description
-          </p>
+          <p className='mt-2 text-md font-semibold'>{item.title}</p>
+          <p className='text-sm p-1 rounded text-gray-500'>{item.artist}</p>
         </div>
       ))}
     </div>
